@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3102D9B51D60E608009A6485 /* AddingRemovingRoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3102D9B41D60E608009A6485 /* AddingRemovingRoomsViewController.swift */; };
+		3102D9B71D60E63D009A6485 /* CalanderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3102D9B61D60E63D009A6485 /* CalanderViewController.swift */; };
+		3102D9B91D60E68A009A6485 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3102D9B81D60E68A009A6485 /* SettingsViewController.swift */; };
+		3102D9BD1D60E730009A6485 /* SBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3102D9BC1D60E730009A6485 /* SBManager.swift */; };
 		31341FB41D5F8C48007ED4D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31341FB31D5F8C48007ED4D4 /* AppDelegate.swift */; };
 		31341FB61D5F8C48007ED4D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31341FB51D5F8C48007ED4D4 /* ViewController.swift */; };
 		31341FB91D5F8C48007ED4D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31341FB71D5F8C48007ED4D4 /* Main.storyboard */; };
@@ -14,6 +18,7 @@
 		31341FBE1D5F8C48007ED4D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31341FBC1D5F8C48007ED4D4 /* LaunchScreen.storyboard */; };
 		31341FC91D5F8C49007ED4D4 /* ProjectSBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31341FC81D5F8C49007ED4D4 /* ProjectSBTests.swift */; };
 		31341FD41D5F8C49007ED4D4 /* ProjectSBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31341FD31D5F8C49007ED4D4 /* ProjectSBUITests.swift */; };
+		31341FE21D5F8F62007ED4D4 /* Screen Shot 2016-08-13 at 10.18.35 AM.png in Resources */ = {isa = PBXBuildFile; fileRef = 31341FE11D5F8F62007ED4D4 /* Screen Shot 2016-08-13 at 10.18.35 AM.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3102D9B41D60E608009A6485 /* AddingRemovingRoomsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddingRemovingRoomsViewController.swift; sourceTree = "<group>"; };
+		3102D9B61D60E63D009A6485 /* CalanderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalanderViewController.swift; sourceTree = "<group>"; };
+		3102D9B81D60E68A009A6485 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		3102D9BC1D60E730009A6485 /* SBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBManager.swift; sourceTree = "<group>"; };
 		31341FB01D5F8C48007ED4D4 /* ProjectSB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectSB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31341FB31D5F8C48007ED4D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31341FB51D5F8C48007ED4D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +56,7 @@
 		31341FCF1D5F8C49007ED4D4 /* ProjectSBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectSBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31341FD31D5F8C49007ED4D4 /* ProjectSBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSBUITests.swift; sourceTree = "<group>"; };
 		31341FD51D5F8C49007ED4D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31341FE11D5F8F62007ED4D4 /* Screen Shot 2016-08-13 at 10.18.35 AM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2016-08-13 at 10.18.35 AM.png"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +107,17 @@
 		31341FB21D5F8C48007ED4D4 /* ProjectSB */ = {
 			isa = PBXGroup;
 			children = (
+				31341FE11D5F8F62007ED4D4 /* Screen Shot 2016-08-13 at 10.18.35 AM.png */,
 				31341FB31D5F8C48007ED4D4 /* AppDelegate.swift */,
 				31341FB51D5F8C48007ED4D4 /* ViewController.swift */,
 				31341FB71D5F8C48007ED4D4 /* Main.storyboard */,
 				31341FBA1D5F8C48007ED4D4 /* Assets.xcassets */,
 				31341FBC1D5F8C48007ED4D4 /* LaunchScreen.storyboard */,
 				31341FBF1D5F8C48007ED4D4 /* Info.plist */,
+				3102D9B41D60E608009A6485 /* AddingRemovingRoomsViewController.swift */,
+				3102D9B61D60E63D009A6485 /* CalanderViewController.swift */,
+				3102D9B81D60E68A009A6485 /* SettingsViewController.swift */,
+				3102D9BC1D60E730009A6485 /* SBManager.swift */,
 			);
 			path = ProjectSB;
 			sourceTree = "<group>";
@@ -231,6 +246,7 @@
 			files = (
 				31341FBE1D5F8C48007ED4D4 /* LaunchScreen.storyboard in Resources */,
 				31341FBB1D5F8C48007ED4D4 /* Assets.xcassets in Resources */,
+				31341FE21D5F8F62007ED4D4 /* Screen Shot 2016-08-13 at 10.18.35 AM.png in Resources */,
 				31341FB91D5F8C48007ED4D4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,8 +272,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3102D9B71D60E63D009A6485 /* CalanderViewController.swift in Sources */,
 				31341FB61D5F8C48007ED4D4 /* ViewController.swift in Sources */,
+				3102D9BD1D60E730009A6485 /* SBManager.swift in Sources */,
 				31341FB41D5F8C48007ED4D4 /* AppDelegate.swift in Sources */,
+				3102D9B91D60E68A009A6485 /* SettingsViewController.swift in Sources */,
+				3102D9B51D60E608009A6485 /* AddingRemovingRoomsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +504,7 @@
 				31341FDA1D5F8C49007ED4D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		31341FDB1D5F8C49007ED4D4 /* Build configuration list for PBXNativeTarget "ProjectSBTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +513,7 @@
 				31341FDD1D5F8C49007ED4D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		31341FDE1D5F8C49007ED4D4 /* Build configuration list for PBXNativeTarget "ProjectSBUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +522,7 @@
 				31341FE01D5F8C49007ED4D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
