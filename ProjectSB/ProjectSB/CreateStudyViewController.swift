@@ -1,15 +1,17 @@
 //
-//  AddingRemovingRoomsViewController.swift
+//  CreateStudyViewController.swift
 //  ProjectSB
 //
-//  Created by Addisalem Kebede on 8/14/16.
+//  Created by Addisalem Kebede on 9/16/16.
 //  Copyright © 2016 Addisalem Kebede. All rights reserved.
 //
 
 import UIKit
 
-class AddingRemovingRoomsViewController: UIViewController {
+class CreateStudyViewController: UIViewController {
 
+    var SB = SBManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

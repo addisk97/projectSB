@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var SB = SBManager()
     
     @IBOutlet weak var userNameTextField: UITextField!
     
@@ -23,8 +24,14 @@ class ViewController: UIViewController {
     
     var blockSign:Character = "*"
     
-    var passwordDictionary:[String: String]  = ["addis":"123"]
+    //var allClassDictionary:Dictionary = [Int:String]() // all classes on campus
     
+    var userClassDictionary:Dictionary = [Int:String]() //class number: class name
+    
+    
+    @IBAction func passwordEnterButtonTapped(sender: UITextField) {
+        checkSignIn()
+    }
     
     
     @IBAction func passwordLetterEntered(sender: UITextField) {
@@ -37,9 +44,7 @@ class ViewController: UIViewController {
         {
             blockedPassword.append(blockSign)
         }
-        var char:Character = "z"
-        
-       // print(passwordTextField.text?.characters.startIndex.advancedBy(((passwordTextField.text?.characters.count)!-1)))
+        var char:Character?
         
         if(passwordTextField.text?.characters.count > 0)
         {
@@ -47,15 +52,20 @@ class ViewController: UIViewController {
         }
         
         
+        //print("passwrdTxtFld " , passwordTextField.text!.characters.count, "  currentP ", currentPassword.characters.count, " char ", char)
         
-        
-        if(char == "*" && (currentPassword.characters.count - (passwordTextField.text?.characters.count)!) == -1)
+        //if user types in a  "*" wont get confused with when deleting
+        if(char != nil && char == "*" && (currentPassword.characters.count - (passwordTextField.text?.characters.count)!) == -1)
         {
-            currentPassword.append(char)
+            currentPassword.append(char!)
         }
-        else if( char != "*")
+        else if(char != nil && char != "*")
         {
-            currentPassword.append(char)
+            currentPassword.append(char!)
+        }
+        else if(currentPassword.characters.count == 0)
+        {
+            passwordTextField.text = ""
         }
         
         
@@ -63,17 +73,17 @@ class ViewController: UIViewController {
         //******* drops last character if the user hits delete
         j = currentPassword.characters.count - (passwordTextField.text?.characters.count)!
         
-        for i in 0..<j
+        for _ in 0..<j
         {
             currentPassword =  String(currentPassword.characters.dropLast())
         }
         //***********************
 
-        print("num ", j)
+        //print("num ", j)
         
         //print(char)
         
-        print("c ", currentPassword)
+        //print("c ", currentPassword)
         
         //print(passwordTextField.text)
         
@@ -84,14 +94,19 @@ class ViewController: UIViewController {
     
     @IBAction func signInButtonTapped(sender: UIButton) {
         
+        checkSignIn()
         
-        if(passwordDictionary[userNameTextField.text!] == nil)
+    }
+    
+    private func checkSignIn()
+    {
+        if(SB.passwordDictionary[userNameTextField.text!] == nil)
         {
             errorLabel.text = "User name does not exist"
             
             errorLabel.textColor = UIColor.redColor()
         }
-        else if(passwordDictionary[userNameTextField.text!]! != passwordTextField.text!)
+        else if(SB.passwordDictionary[userNameTextField.text!]! != currentPassword)
         {
             errorLabel.text = "Password does not match User name"
             
@@ -104,7 +119,7 @@ class ViewController: UIViewController {
         
         userNameTextField.text = ""
         passwordTextField.text = ""
-        
+        currentPassword = ""
     }
     
     
@@ -112,6 +127,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        userClassDictionary[1] = "class1"
+        userClassDictionary[2] = "class2"
+        userClassDictionary[3] = "class3"
+        userClassDictionary[4] = "class4"
+        userClassDictionary[5] = "class5"
+        userClassDictionary[6] = "class6"
+        userClassDictionary[7] = "class7"
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -127,7 +149,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let myView:SelectionViewController = segue.destinationViewController as! SelectionViewController
+        
+        myView.SB = self.SB
+        
+    }
     
     
 
