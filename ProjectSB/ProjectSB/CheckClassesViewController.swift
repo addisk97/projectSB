@@ -25,16 +25,34 @@ class CheckClassesViewController: UIViewController,  UITableViewDataSource, UITa
     
     public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        var temp = UITableViewCell()
         
-        return temp
+        let cell:classTableViewCell = tableView.dequeueReusableCellWithIdentifier("classTableViewCell", forIndexPath: indexPath) as! classTableViewCell
+
+        cell.className.text = SB.userClasses[indexPath.row]
+        
+        cell.classNumber.text = String(indexPath.row + 1)
+        
+        return cell
     }
+    
     
     public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        
-        return 0
+        return SB.userClasses.count
     }
+    
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+
+            let myView1 = segue.destinationViewController as! ClassStudyScheduleViewController
+            
+            //passing through program manager
+            myView1.SB = self.SB
+            
+            
+        }
+
     
     
 

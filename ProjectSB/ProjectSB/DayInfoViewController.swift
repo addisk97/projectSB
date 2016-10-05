@@ -38,7 +38,7 @@ class DayInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell:studyTimeTableViewCell = tableView.dequeueReusableCellWithIdentifier("tableViewCell", forIndexPath: indexPath) as! studyTimeTableViewCell
+        let cell:studyTimeTableViewCell = tableView.dequeueReusableCellWithIdentifier("studyTimeTableViewCell", forIndexPath: indexPath) as! studyTimeTableViewCell
         
         cell.locationLabel.text = SB.studyTimesArray[indexPath.row].location
         

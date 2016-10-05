@@ -13,15 +13,15 @@ class SelectionViewController: UIViewController {
     
     var SB = SBManager()
 
-    @IBAction func addOrRemoveClassesButtonTapped(sender: UIButton) {
-
-        performSegueWithIdentifier("selectionToAddRemoveSegue", sender: self)
+    @IBAction func checkClassesButtonTapped(sender: UIButton) {
+        //go to check classes
+        performSegueWithIdentifier("selectionToCheckClassesSegue", sender: self)
         
     }
     
 
     @IBAction func checkCalenderButtonTapped(sender: UIButton) {
-        
+        //go to Calander View Controller
         performSegueWithIdentifier("selectionToCalenderSegue", sender: self)
         
     }
@@ -32,6 +32,22 @@ class SelectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        //hides back button in navigation
+        self.navigationItem .setHidesBackButton(true, animated: false)
+        
+        
+        
+        //adding fabricated classes
+        SB.userClasses.append("Class1")
+        SB.userClasses.append("Class2")
+        SB.userClasses.append("Class3")
+        SB.userClasses.append("Class4")
+        SB.userClasses.append("Class5")
+        
+        
+        
+        //adds fabricated study times
         SB.studyTimesArray.append(SBManager.studyInfo.init(className: "class1",timeHours: 1, timeMin: 30, location: "Library", maxNumberOfPeople: 5))
         SB.studyTimesArray.append(SBManager.studyInfo.init(className: "class2",timeHours: 1, timeMin: 30, location: "Class", maxNumberOfPeople: 4))
         SB.studyTimesArray.append(SBManager.studyInfo.init(className: "class3",timeHours: 2, timeMin: 30, location: "Home", maxNumberOfPeople: 5))
@@ -44,6 +60,9 @@ class SelectionViewController: UIViewController {
         SB.studyTimesArray.append(SBManager.studyInfo.init(className: "class5",timeHours: 3, timeMin: 30, location: "Class", maxNumberOfPeople: 3))
         SB.studyTimesArray.append(SBManager.studyInfo.init(className: "class2",timeHours: 3, timeMin: 30, location: "Home", maxNumberOfPeople: 6))
 
+        
+        
+        
         // Do any additional setup after loading the view.
     }
 
@@ -57,13 +76,13 @@ class SelectionViewController: UIViewController {
 
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if(segue.identifier == "selectionToAddRemoveSegue")
+        if(segue.identifier == "selectionToCheckClassesSegue")
         {
             let myView1 = segue.destinationViewController as! CheckClassesViewController
             
+            //passing through program manager
             myView1.SB = self.SB
             
-            var i = 0
             
         }
         else if (segue.identifier == "selectionToCalenderSegue")
@@ -71,9 +90,9 @@ class SelectionViewController: UIViewController {
         
             let myView2 = segue.destinationViewController as! CalanderViewController
             
+            //passing through program manager
             myView2.SB = self.SB
             
-              var i = 0
         }
         
         

@@ -10,6 +10,9 @@ import UIKit
 
 class ClassStudyScheduleViewController: UIViewController {
 
+    
+    var SB = SBManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

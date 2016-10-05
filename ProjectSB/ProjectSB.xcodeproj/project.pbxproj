@@ -11,6 +11,7 @@
 		3102D9BD1D60E730009A6485 /* SBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3102D9BC1D60E730009A6485 /* SBManager.swift */; };
 		31106E6E1D8A72E9008C386C /* CheckClassesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31106E6D1D8A72E9008C386C /* CheckClassesViewController.swift */; };
 		31106E701D8A7766008C386C /* ClassStudyScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31106E6F1D8A7766008C386C /* ClassStudyScheduleViewController.swift */; };
+		313099FA1DA1D12000EA1D17 /* classTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313099F91DA1D12000EA1D17 /* classTableViewCell.swift */; };
 		31341FB41D5F8C48007ED4D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31341FB31D5F8C48007ED4D4 /* AppDelegate.swift */; };
 		31341FB61D5F8C48007ED4D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31341FB51D5F8C48007ED4D4 /* ViewController.swift */; };
 		31341FB91D5F8C48007ED4D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31341FB71D5F8C48007ED4D4 /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 		3102D9BC1D60E730009A6485 /* SBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBManager.swift; sourceTree = "<group>"; };
 		31106E6D1D8A72E9008C386C /* CheckClassesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckClassesViewController.swift; sourceTree = "<group>"; };
 		31106E6F1D8A7766008C386C /* ClassStudyScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassStudyScheduleViewController.swift; sourceTree = "<group>"; };
+		313099F91DA1D12000EA1D17 /* classTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = classTableViewCell.swift; sourceTree = "<group>"; };
 		31341FB01D5F8C48007ED4D4 /* ProjectSB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectSB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31341FB31D5F8C48007ED4D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31341FB51D5F8C48007ED4D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -98,7 +100,6 @@
 			isa = PBXGroup;
 			children = (
 				31341FB21D5F8C48007ED4D4 /* ProjectSB */,
-				31341FC71D5F8C49007ED4D4 /* ProjectSBTests */,
 				31341FD21D5F8C49007ED4D4 /* ProjectSBUITests */,
 				31341FB11D5F8C48007ED4D4 /* Products */,
 			);
@@ -123,6 +124,8 @@
 				31341FB71D5F8C48007ED4D4 /* Main.storyboard */,
 				31981CE31D6A6A1900527817 /* calendarCollectionViewCell.swift */,
 				31E66D0A1D8889F600C5D48B /* studyTimeTableViewCell.swift */,
+				313099F91DA1D12000EA1D17 /* classTableViewCell.swift */,
+				31341FC71D5F8C49007ED4D4 /* ProjectSBTests */,
 				31341FBA1D5F8C48007ED4D4 /* Assets.xcassets */,
 				31341FBC1D5F8C48007ED4D4 /* LaunchScreen.storyboard */,
 				31341FBF1D5F8C48007ED4D4 /* Info.plist */,
@@ -144,7 +147,7 @@
 				31341FCA1D5F8C49007ED4D4 /* Info.plist */,
 			);
 			path = ProjectSBTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		31341FD21D5F8C49007ED4D4 /* ProjectSBUITests */ = {
 			isa = PBXGroup;
@@ -291,6 +294,7 @@
 				3102D9B71D60E63D009A6485 /* CalanderViewController.swift in Sources */,
 				31981CE41D6A6A1900527817 /* calendarCollectionViewCell.swift in Sources */,
 				31341FB61D5F8C48007ED4D4 /* ViewController.swift in Sources */,
+				313099FA1DA1D12000EA1D17 /* classTableViewCell.swift in Sources */,
 				31C8B1541D8C7A8C00D82616 /* CreateStudyViewController.swift in Sources */,
 				31E66D0B1D8889F600C5D48B /* studyTimeTableViewCell.swift in Sources */,
 				3102D9BD1D60E730009A6485 /* SBManager.swift in Sources */,

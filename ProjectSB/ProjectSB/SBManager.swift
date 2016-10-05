@@ -20,7 +20,9 @@ class SBManager
     
     var studyTimesArray = [studyInfo]()
     
-    var userClassDictionary:Dictionary = [Int:String]() // Dictionary of classes user adds
+    var userClasses = [String]()
+    
+    //var userClassDictionary:Dictionary = [Int:String]() // Dictionary of classes user adds
     
     var passwordDictionary:[String: String]  = ["addis":"123"]
     
